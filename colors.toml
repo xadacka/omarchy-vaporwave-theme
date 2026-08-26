@@ -1,0 +1,36 @@
+mode = "dark"
+
+accent = "#ff2e92"
+selection = "#3d1a66"
+muted = "#5a4b8a"
+
+background = "#120a2a"
+dark_background = "#0a0620"
+darker_background = "#050310"
+lighter_background = "#22134a"
+
+foreground = "#eae6ff"
+dark_foreground = "#8577b3"
+light_foreground = "#d3c9ff"
+bright_foreground = "#ffffff"
+
+red = "#ff3d6e"
+yellow = "#ffd166"
+orange = "#ff8a4c"
+green = "#00ffa3"
+cyan = "#22e4ff"
+blue = "#7b6bff"
+magenta = "#ff3ec8"
+brown = "#8a5a7a"
+
+bright_red = "#ff6b93"
+bright_yellow = "#ffe066"
+bright_green = "#5cffc8"
+bright_cyan = "#7dfbff"
+bright_blue = "#a394ff"
+bright_magenta = "#ff7ce0"
+
+# Neon diagonal gradient border, hot pink into cyan — used for active window
+# borders and mirrored onto lock/menu/popup borders via shell.toml.
+hyprland_active_border = "rgba(ff2e92ee) rgba(22e4ffee) 45deg"
+hyprland_inactive_border = "rgba(3d1a66aa)"

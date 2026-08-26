@@ -1,0 +1,33 @@
+-- Optional Hyprland "flair" used alongside this theme: tighter opacity,
+-- rounded corners, and a couple of quick bezier-driven animations.
+--
+-- This is NOT loaded automatically by Omarchy — general look-and-feel
+-- (opacity/rounding/animations) is user config, not theme-scoped, so it isn't
+-- part of colors.toml. The neon window-border gradient itself IS part of the
+-- theme (see hyprland_active_border in colors.toml) and needs nothing extra.
+--
+-- To use this: merge these values into your own Hyprland Lua config (e.g.
+-- ~/.config/hypr/looknfeel.lua), or into HyprMod's custom settings if you use
+-- that GUI. Don't overwrite hyprland-gui.lua blindly if HyprMod manages it —
+-- it regenerates that file and will drop anything you hand-edit into it.
+
+hl.config({
+  decoration = {
+    active_opacity = 0.9,
+    inactive_opacity = 0.7,
+    dim_strength = 0.4,
+    rounding = 10,
+    blur = {
+      enabled = true,
+    },
+  },
+  general = {
+    border_size = 4,
+  },
+})
+
+hl.curve("almostLinear", { type = "bezier", points = { {0.5, 0.5}, {0.75, 1.0} } })
+hl.curve("quick", { type = "bezier", points = { {0.15, 0.0}, {0.1, 1.0} } })
+
+hl.animation({ leaf = "fade", enabled = true, speed = 3.5, bezier = "quick" })
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.7, bezier = "almostLinear" })
